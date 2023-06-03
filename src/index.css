@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.g-main { @apply bg-gradient-to-r from-gray-900 to-purple-900}
+.g-main-2 { @apply bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-50 text-gray-900}
+
+.bg-main {
+    @apply bg-gradient-to-r from-gray-100 to-slate-200
+};
+ 
+.icon {
+    @apply h-6 w-6 font-medium text-gray-600 
+};
+.icon-selected {
+    @apply h-7 w-7 font-bold text-gray-900 
+};
+.icon-new-post {
+    @apply   inline-flex   items-center justify-center rounded-full text-gray-400 hover:text-gray-500
+}
+.icon-sm {
+    @apply h-6 w-6 hover:text-gray-900 text-gray-700
+};
+
+.mega-title {
+    @apply   text-2xl font-bold tracking-tight text-gray-900
+};
+.title {
+    @apply text-gray-700 font-bold text-lg 
+};
+.subtitle {
+    @apply text-gray-600 font-medium text-base 
+};
+
+.separator {
+    @apply text-gray-600 font-medium text-sm 
+};
+
+.text {
+    @apply text-gray-600 font-normal text-sm 
+};
+
+.btn-main {
+    @apply hover:opacity-80 text-sm g-main-2 font-bold py-2 px-4 rounded-full
+};
+.badge-main {
+    @apply hover:opacity-80 text-xs bg-gradient-to-r from-green-100 via-green-100 to-green-50 text-gray-900 font-bold py-1 px-2 rounded-full
+};
+
+.btn-selected {
+    @apply hover:opacity-80 text-sm bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-500 text-gray-900 font-bold py-2 px-4 rounded-full
+};
+.btn-update {
+    @apply flex  w-full justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2
+};
+
+
+.auto-resizable-textarea {
+  resize: vertical; /* Permite ajustar la altura verticalmente */
+  overflow: hidden; /* Oculta cualquier desbordamiento de contenido */
+}
+
+.player-wrapper {
+    position: relative;
+    padding-top: 56.25% /* Player ratio: 100 / (1280 / 720) */
+  }
+  
+  .react-player {
+    position: absolute;
+    top: 0;
+    left: 0;
+  
+  }
+
+  .content {
+    @apply   flex-wrap w-full  
+  }
+  .content-image {
+    @apply   w-full h-auto rounded-lg object-cover object-center 
+  }
+
+/* Estilos para el modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9998;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 18px;
+}
+
+/* Estilos para la galería de imágenes */
+.image-gallery-slide .image-gallery-image {
+  max-height: 400px;
+  border-radius: 7%;
+  /* Ajusta la altura máxima de las imágenes */
+}
+
+ 
+.modal-download {
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-download:hover {
+  text-decoration: underline;
+}
+
+.modal-download-icon {
+  margin-right: 5px;
+}
+
+.modal-image-wrapper {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.image-gallery-thumbnail-image {
+  width: 50; /* Ajusta el ancho deseado */
+  height: 50px; /* Ajusta la altura deseada */
+  object-fit: cover;
+  border-radius: 7%;
+  margin-top: 10px;
+  /* Aplica bordes redondeados */
+}
+
+.modal-image-wrapper img {
+  max-height: 80vh; /* Ajusta la altura máxima de las imágenes en el modal */
+  max-width: 100%; /* Ajusta el ancho máximo de las imágenes en el modal */
+}
+
+  .input-text {@apply block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm}
