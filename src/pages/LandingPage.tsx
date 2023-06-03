@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import Hero from "../components/landing/Hero";
 import { useSelector } from "react-redux";
 import { useTranslation } from "react-i18next";
-import TimeLineHome from "../components/publications/TimeLineHome";
 const LandingPage = () => {
   const { t } = useTranslation("home");
   const { token } = useSelector((state: any) => state.auth);

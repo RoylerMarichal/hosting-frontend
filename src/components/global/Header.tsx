@@ -88,7 +88,6 @@ const Header = () => {
                 className="max-h-9 -mt-2"
                 alt=""
               />
-             
             </Link>
           </div>
           <div className="col-span-2  lg:hidden space-x-24 mx-auto pb-3  "></div>
@@ -96,11 +95,11 @@ const Header = () => {
           <div className="col-span-2 pt-1 hidden lg:flex space-x-24 mx-auto pb-3  ">
             <button
               className={`${
-                location.pathname === "/"
+                location.pathname === "/home"
                   ? "border-b-2 border-stone-900  "
                   : " "
               } col-span-1 mx-auto pb-3  `}
-              onClick={() => navigate("/")}
+              onClick={() => navigate(user ? "/home" : "/")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -118,7 +117,7 @@ const Header = () => {
               </svg>
             </button>
             <button
-              onClick={() => navigate("/apps")}
+              onClick={() => navigate("/services")}
               className={iconClassNameCommunity}
             >
               <svg
@@ -128,23 +127,23 @@ const Header = () => {
                 strokeWidth={1.5}
                 stroke="currentColor"
                 className={
-                  location.pathname === "/apps" ? "icon-selected" : "icon"
+                  location.pathname === "/services" ? "icon-selected" : "icon"
                 }
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"
+                  d="M6.429 9.75L2.25 12l4.179 2.25m0-4.5l5.571 3 5.571-3m-11.142 0L2.25 7.5 12 2.25l9.75 5.25-4.179 2.25m0 0L21.75 12l-4.179 2.25m0 0l4.179 2.25L12 21.75 2.25 16.5l4.179-2.25m11.142 0l-5.571 3-5.571-3"
                 />
               </svg>
             </button>
             <button
               className={`${
-                location.pathname === "/god"
+                location.pathname === "/invoices"
                   ? "border-b-2 border-stone-900  "
                   : " "
               } col-span-1 mx-auto pb-3 `}
-              onClick={() => navigate("/god")}
+              onClick={() => navigate("/invoices")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -153,23 +152,23 @@ const Header = () => {
                 strokeWidth={1.5}
                 stroke="currentColor"
                 className={
-                  location.pathname === "/god" ? "icon-selected" : "icon"
+                  location.pathname === "/invoices" ? "icon-selected" : "icon"
                 }
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                  d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z"
                 />
               </svg>
             </button>
             <button
               className={`${
-                location.pathname === "/peoples"
+                location.pathname === "/cart"
                   ? "border-b-2 border-stone-900  "
                   : " "
               } col-span-1 mx-auto pb-3 `}
-              onClick={() => navigate("/peoples")}
+              onClick={() => navigate("/cart")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -178,23 +177,23 @@ const Header = () => {
                 strokeWidth={1.5}
                 stroke="currentColor"
                 className={
-                  location.pathname === "/peoples" ? "icon-selected" : "icon"
+                  location.pathname === "/cart" ? "icon-selected" : "icon"
                 }
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+                  d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
                 />
               </svg>
             </button>
             <button
               className={`${
-                location.pathname === "/messages"
+                location.pathname === "/help"
                   ? "border-b-2 border-stone-900  "
                   : " "
               } col-span-1 mx-auto pb-3 `}
-              onClick={() => navigate("/messages")}
+              onClick={() => navigate("/help")}
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -203,13 +202,13 @@ const Header = () => {
                 strokeWidth={1.5}
                 stroke="currentColor"
                 className={
-                  location.pathname === "/messages" ? "icon-selected" : "icon"
+                  location.pathname === "/help" ? "icon-selected" : "icon"
                 }
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
+                  d="M16.712 4.33a9.027 9.027 0 011.652 1.306c.51.51.944 1.064 1.306 1.652M16.712 4.33l-3.448 4.138m3.448-4.138a9.014 9.014 0 00-9.424 0M19.67 7.288l-4.138 3.448m4.138-3.448a9.014 9.014 0 010 9.424m-4.138-5.976a3.736 3.736 0 00-.88-1.388 3.737 3.737 0 00-1.388-.88m2.268 2.268a3.765 3.765 0 010 2.528m-2.268-4.796a3.765 3.765 0 00-2.528 0m4.796 4.796c-.181.506-.475.982-.88 1.388a3.736 3.736 0 01-1.388.88m2.268-2.268l4.138 3.448m0 0a9.027 9.027 0 01-1.306 1.652c-.51.51-1.064.944-1.652 1.306m0 0l-3.448-4.138m3.448 4.138a9.014 9.014 0 01-9.424 0m5.976-4.138a3.765 3.765 0 01-2.528 0m0 0a3.736 3.736 0 01-1.388-.88 3.737 3.737 0 01-.88-1.388m2.268 2.268L7.288 19.67m0 0a9.024 9.024 0 01-1.652-1.306 9.027 9.027 0 01-1.306-1.652m0 0l4.138-3.448M4.33 16.712a9.014 9.014 0 010-9.424m4.138 5.976a3.765 3.765 0 010-2.528m0 0c.181-.506.475-.982.88-1.388a3.736 3.736 0 011.388-.88m-2.268 2.268L4.33 7.288m6.406 1.18L7.288 4.33m0 0a9.024 9.024 0 00-1.652 1.306A9.025 9.025 0 004.33 7.288"
                 />
               </svg>
             </button>
@@ -277,50 +276,7 @@ const Header = () => {
                             className="  mx-auto justify-center space-y-3 flex flex-col "
                             aria-hidden="true"
                           >
-                            <Link to={"/profile"}>
-                              <button
-                                onClick={() => setOpen(!open)}
-                                className="w-full px-7 text-lg color-main flex self-center justify-between  "
-                              >
-                                Mi perfil
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  strokeWidth={1.5}
-                                  stroke="currentColor"
-                                  className="w-6 h-6"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-                                  />
-                                </svg>
-                              </button>
-                            </Link>
-                            <Link to={"/progress"}>
-                              <button
-                                onClick={() => setOpen(!open)}
-                                className="w-full px-7 text-lg color-main flex self-center justify-between  "
-                              >
-                                Mi progreso
-                                <svg
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  fill="none"
-                                  viewBox="0 0 24 24"
-                                  strokeWidth={1.5}
-                                  stroke="currentColor"
-                                  className="w-6 h-6"
-                                >
-                                  <path
-                                    strokeLinecap="round"
-                                    strokeLinejoin="round"
-                                    d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                                  />
-                                </svg>
-                              </button>
-                            </Link>
+                            
                             <Link to={"/notifications"}>
                               <button
                                 onClick={() => setOpen(!open)}
@@ -381,13 +337,7 @@ const Header = () => {
                           >
                             ¿Quiénes somos?
                           </Link>
-                          <Link
-                            onClick={() => setOpen(!open)}
-                            className="px-3"
-                            to={"/roadmap"}
-                          >
-                            Road Map
-                          </Link>
+                           
                         </div>
                       </div>
                       {user?.username && (

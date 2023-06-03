@@ -1,6 +1,5 @@
 import MessageToDay from "../commons/MessageToDay";
 import { ProgressCard } from "../commons/ProgressCard";
-import NextEventsList from "../events/NextEventsList";
 import PeoplesOnline from "../landing/PeoplesOnline";
 import { useLocation } from "react-router";
 
@@ -29,7 +28,7 @@ const SidebarsLayout = (props: { side: string }) => {
               </div>{" "}
               <h2 className="title">Events</h2>
               <div  >
-                <NextEventsList />
+              
               </div>
             </aside>
           )

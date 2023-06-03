@@ -4,7 +4,6 @@ import HomePage from "./pages/LandingPage";
 
 //Profile Folder
 import SettingProfilePage from "./pages/profile/SettingsProfilePage";
-import ProfilePage from "./pages/profile/ProfilePage";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -19,6 +18,10 @@ import ForgotPassword from "./pages/auth/ForgotPassword";
 import PrivatePages from "./components/layouts/PrivatePages";
 import NotificationsPage from "./pages/profile/NotificationsPage";
 import LandingPage from "./pages/LandingPage";
+import ServicesPage from "./pages/ServicesPage";
+import InvoicesPage from "./pages/InvoicesPage";
+import CartPage from "./pages/CartPage";
+import HelpPage from "./pages/HelpPage";
 
 export default function App() {
   return (
@@ -30,14 +33,29 @@ export default function App() {
               <Route element={<TemplateLanding />}>
                 <Route element={<PrivatePages />}>
                   <Route
-                    key={"/profile"}
-                    path="/profile"
-                    element={<ProfilePage />}
-                  />
-                  <Route
                     key={"/home"}
                     path="/home"
                     element={<HomePage />}
+                  />
+                  <Route
+                    key={"/services"}
+                    path="/services"
+                    element={<ServicesPage />}
+                  />
+                  <Route
+                    key={"/buy"}
+                    path="/cart"
+                    element={<CartPage />}
+                  />
+                  <Route
+                    key={"/help"}
+                    path="/help"
+                    element={<HelpPage />}
+                  />
+                  <Route
+                    key={"/invoices"}
+                    path="/invoices"
+                    element={<InvoicesPage />}
                   />
                   <Route
                     key={"/notifications"}
@@ -65,11 +83,6 @@ export default function App() {
                 </Route>
                 <Route key={"/about"} path="/about" element={<AboutPage />} />
                 <Route key={"/roadmap"} path="/roadmap" element={<ReadMap />} />
-                <Route
-                  key={"username"}
-                  path="/:username"
-                  element={<ProfilePage />}
-                />
               </Route>{" "}
             </Routes>
             <ToastContainer />

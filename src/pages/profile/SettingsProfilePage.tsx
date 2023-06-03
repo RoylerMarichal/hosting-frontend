@@ -1,12 +1,7 @@
-import { useEffect, useRef } from "react";
-import { serverImageKitAuth } from "../../utils/serveUrl";
-import { IKContext, IKUpload } from "imagekitio-react";
-import { useState } from "react";
-import { useForm, Resolver } from "react-hook-form";
+import { useEffect, useState } from "react";
 import { useMutation, useQuery } from "@apollo/client";
 import { GET_CURRENT_USER_FULL, UPDATE_USER } from "../../utils/queries";
 import { toast } from "react-toastify";
-import Loading from "../../components/commons/Loading";
 import defaults from "../../utils/defaults";
 import yourhandle from "countrycitystatejson";
 import { CountryType } from "../../types/Types";
@@ -15,7 +10,7 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { useDispatch } from "react-redux";
 import { updateUserInfo } from "../../redux/authSlice";
 import { useTranslation } from "react-i18next";
-import LanguagesSetting from "./settings/LanguagesSetting";
+import { Resolver, useForm } from "react-hook-form";
 
 type FormValues = {
   email: string;
@@ -110,7 +105,7 @@ const SettingProfilePage = () => {
 
   const [tabs, setTabs] = useState([
     { name: t("general"), key: "general", href: "#", current: true },
-    { name: t("language"), key: "language", href: "#", current: false },
+   // { name: t("language"), key: "language", href: "#", current: false },
     // { name: "Notifications", href: "#", current: false },
     // { name: "Plan", href: "#", current: false },
     // { name: "Billing", href: "#", current: false },
@@ -743,19 +738,7 @@ const SettingProfilePage = () => {
               </div>
             );
           }
-          if (tab.key === "language") {
-            return (
-              <div key={tab.name}>
-                <div>
-                  <div className="pb-16">
-                    <div className="px-4 sm:px-6 md:px-0">
-                      <LanguagesSetting />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            );
-          }
+          
         }
       })}
     </div>
