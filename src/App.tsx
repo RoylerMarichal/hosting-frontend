@@ -22,6 +22,7 @@ import ServicesPage from "./pages/ServicesPage";
 import InvoicesPage from "./pages/InvoicesPage";
 import CartPage from "./pages/CartPage";
 import HelpPage from "./pages/HelpPage";
+import NewOrderPage from "./pages/NewOrderPage";
 
 export default function App() {
   return (
@@ -46,6 +47,11 @@ export default function App() {
                     key={"/buy"}
                     path="/cart"
                     element={<CartPage />}
+                  />
+                  <Route
+                    key={"newOrder"}
+                    path="/buy/:serviceType/:packageId"
+                    element={<NewOrderPage />}
                   />
                   <Route
                     key={"/help"}

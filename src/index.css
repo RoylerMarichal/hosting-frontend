@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .g-main { @apply bg-gradient-to-r from-gray-900 to-purple-900}
-.g-main-2 { @apply bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-50 text-gray-900}
+.g-main-2 { @apply bg-gradient-to-r from-green-300 via-green-500 to-green-500 text-gray-900}
 
 .bg-main {
     @apply bg-gradient-to-r from-gray-100 to-slate-200
@@ -44,7 +44,7 @@
     @apply hover:opacity-80 text-sm g-main-2 font-bold py-2 px-4 rounded-full
 };
 .badge-main {
-    @apply hover:opacity-80 text-xs bg-gradient-to-r from-green-100 via-green-100 to-green-50 text-gray-900 font-bold py-1 px-2 rounded-full
+    @apply hover:opacity-80 text-xs bg-gradient-to-r from-green-100 via-green-700 to-green-50 text-gray-900 font-bold py-1 px-2 rounded-full
 };
 
 .btn-selected {

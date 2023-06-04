@@ -189,14 +189,65 @@ const TIMELINE_SUBSCRIPTION = gql`
 const GET_SERVICES = gql`
   query GetServices {
     getServices {
+     id
       name
       description
       resume
+      type
     }
   }
 `;
+const GET_PACKAGE = gql`
+ query GetPackage($packageId: Int) {
+  getPackage(packageId: $packageId) {
+  id
+  price
+  name  
+  }
+}
+`;
+const NEW_ORDER = gql`
+ mutation NewOrder($packageId: Int, $data: String) {
+  newOrder(packageId: $packageId, data: $data) {
+    id
+  }
+}
+`;
+
+const GET_PACKAGES_BY_SERVICE = gql`
+query GetPackagesByService($serviceId: Int) {
+  getPackagesByService(serviceId: $serviceId) {
+    id
+    name
+    description
+    price
+  }
+}
+`;
+const GET_ORDERS = gql`
+query GetOrders {
+  getOrders {
+  packageId
+  status
+  id
+    package {
+      id
+      name
+      price
+      service {
+        name
+        type
+      }
+    }
+  }
+}
+`;
 
 export {
+  GET_ORDERS,
+  NEW_ORDER,
+  GET_PACKAGE,
+  GET_PACKAGES_BY_SERVICE,
   GET_SERVICES,
   FORGOT_PASSWORD,
   UPDATE_PASSWORD_BY_USERID,
